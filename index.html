@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+    <title>Corefinity Admin Panel | Enterprise Control Center</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <!--Css link-->
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <div class="mobile-overlay" id="mobileOverlay"></div>
+    <div class="admin-container">
+      <div class="sidebar" id="sidebar">
+        <div class="logo-area">
+          <div class="logo-icon"><i class="fas fa-cloud"></i></div>
+          <div class="logo-text">Corefinity<span>|panel</span></div>
+        </div>
+        <div class="nav-items-container">
+          <div class="nav-item active" data-page="dashboard">
+            <i class="fas fa-tachometer-alt"></i
+            ><span class="nav-text">Dashboard</span>
+          </div>
+          <div class="nav-item" data-page="deployments">
+            <i class="fas fa-rocket"></i
+            ><span class="nav-text">Deployments</span>
+          </div>
+          <div class="nav-item" data-page="environments">
+            <i class="fas fa-cloud"></i
+            ><span class="nav-text">Environments</span>
+          </div>
+          <div class="nav-item" data-page="profile">
+            <i class="fas fa-user-circle"></i
+            ><span class="nav-text">User Profile</span>
+          </div>
+          <div class="nav-item" data-page="tickets">
+            <i class="fas fa-ticket-alt"></i
+            ><span class="nav-text">Tickets</span>
+          </div>
+          <div class="nav-item" data-page="ticketview">
+            <i class="fas fa-comment-dots"></i
+            ><span class="nav-text">Ticket View</span>
+          </div>
+          <div class="nav-item" data-page="settings">
+            <i class="fas fa-cog"></i><span class="nav-text">Settings</span>
+          </div>
+        </div>
+        <div class="sidebar-footer" data-page="logout">
+          <i class="fas fa-sign-out-alt"></i
+          ><span class="nav-text"> Logout</span>
+        </div>
+      </div>
+
+      <div class="main-content">
+        <div class="header">
+          <div class="header-left">
+            <button class="menu-toggle" id="menuToggle">
+              <i class="fas fa-bars"></i>
+            </button>
+            <div class="header-search">
+              <i class="fas fa-search"></i>
+              <input
+                type="text"
+                placeholder="Search deployments, tickets, environments..."
+              />
+              <i class="fas fa-sliders-h" style="opacity: 0.5"></i>
+            </div>
+          </div>
+          <div class="header-actions">
+            <button class="theme-toggle" id="themeToggle">
+              <i class="fas fa-moon"></i>
+            </button>
+            <div class="notification-badge">
+              <i class="fas fa-bell"></i>
+              <span class="badge-dot"></span>
+            </div>
+            <div class="user-avatar">
+              <i class="fas fa-user"></i>
+            </div>
+          </div>
+        </div>
+        <div class="content" id="mainContent"></div>
+      </div>
+    </div>
+
+  <!--Js link-->
+  <script src="js/main.js"></script>
+  </body>
+</html>
